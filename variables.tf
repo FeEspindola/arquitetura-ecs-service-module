@@ -203,3 +203,14 @@ variable "scale_tracking_requests" {
   description = "Número alvo de solicitações por segundo (TPS) para o rastreamento de escala."
   default     = 0
 }
+
+variable "efs_volumes" {
+  type = list(object({
+    volume_name : string
+    file_system_id: string
+    fyle_system_root: string
+    mount_point: string
+    read_only : bool
+  }))
+  default = []
+}
