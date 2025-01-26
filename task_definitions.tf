@@ -53,6 +53,7 @@ dynamic "volume" {
       }
 
       environment = var.environment_variables
+      secrets = var.secrets
 
       mount_point = [
         for volume in var.efs_volumes : {
